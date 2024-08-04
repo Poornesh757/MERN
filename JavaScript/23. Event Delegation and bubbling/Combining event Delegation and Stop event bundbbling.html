@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Delegation and Stop Bubbling Example</title>
+</head>
+<body>
+    <div id="container">
+        <ul id="parent">
+            <li>Item 1</li>
+            <li>Item 2</li>
+            <li>Item 3</li>
+        </ul>
+        <button id="child">Click me</button>
+    </div>
+    <button id="addItem">Add Item</button>
+
+    <script>
+        let container = document.getElementById("container");
+        let parent = document.getElementById("parent");
+        let child = document.getElementById("child");
+        let addItem = document.getElementById("addItem");
+
+        // Event delegation
+        parent.addEventListener("click", function(event) {
+            if (event.target.tagName === "LI") {
+                console.log("List item clicked: " + event.target.textContent);
+                event.stopPropagation();
+            }
+        });
+
+        // Container event listener
+        container.addEventListener("click", function() {
+            console.log("Container clicked!");
+        });
+
+        // Child button event listener
+        child.addEventListener("click", function(event) {
+            console.log("Button clicked!");
+            event.stopPropagation();
+        });
+
+        // Dynamically add new items
+        addItem.addEventListener("click", function() {
+            let newItem = document.createElement("li");
+            newItem.textContent = "New Item";
+            parent.appendChild(newItem);
+        });
+    </script>
+</body>
+</html>

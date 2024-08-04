@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flex Properties</title>
+    <style>
+        /* Basic Styling */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        #container {
+            display: flex;
+        }
+        #item1 {
+            background-color: rgb(255, 0, 0);
+            border: black solid 1px;
+            padding: 1rem;
+            margin: 0.75rem;
+            /* flex-basis: 150px; */
+            /* flex-grow: 1; */
+            flex-shrink: 1;
+        }
+        #item2 {
+            background-color: rgb(0, 255, 34);
+            border: black solid 1px;
+            padding: 1rem;
+            margin: 0.75rem;
+            /* flex-basis: 40%; */
+            /* flex-grow: 2; */
+            flex-shrink: 2;
+        }
+        #item3 {
+            background-color: rgb(55, 0, 255);
+            border: black solid 1px;
+            padding: 1rem;
+            margin: 0.75rem;
+            /* flex-basis: 50px; */
+            /* flex-grow: 3; */
+            flex-shrink: 3;
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <div id="item1"><h3>Item 1</h3></div>
+        <div id="item2"><h3>Item 2</h3></div>
+        <div id="item3"><h3>Item 3</h3></div>
+    </div>
+</body>
+</html>

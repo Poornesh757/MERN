@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Keyboard and Input Events Example</title>
+</head>
+<body>
+    <input type="text" id="myInput" placeholder="Type something...">
+    <form id="myForm">
+        <input type="text" name="username" placeholder="Username">
+        <button type="submit">Submit</button>
+        <button type="reset">Reset</button>
+    </form>
+
+    <script>
+        // Keyboard events
+        document.addEventListener("keydown", function(event) {
+            console.log(`Key down: ${event.key} (code: ${event.code})`);
+        });
+
+        document.addEventListener("keypress", function(event) {
+            console.log(`Key press: ${event.key}`);
+        });
+
+        document.addEventListener("keyup", function(event) {
+            console.log(`Key up: ${event.key} (code: ${event.code})`);
+        });
+
+        // Input events
+        let input = document.getElementById("myInput");
+
+        input.addEventListener("input", function(event) {
+            console.log(`Input value: ${event.target.value}`);
+        });
+
+        input.addEventListener("change", function(event) {
+            console.log(`Input value changed: ${event.target.value}`);
+        });
+
+        input.addEventListener("focus", function() {
+            console.log("Input focused");
+        });
+
+        input.addEventListener("blur", function() {
+            console.log("Input lost focus");
+        });
+
+        // Form events
+        let form = document.getElementById("myForm");
+
+        form.addEventListener("submit", function(event) {
+            event.preventDefault();  // Prevent the default form submission
+            console.log("Form submitted!");
+        });
+
+        form.addEventListener("reset", function() {
+            console.log("Form reset!");
+        });
+
+        // Checking for modifier keys
+        document.addEventListener("keydown", function(event) {
+            if (event.ctrlKey) {
+                console.log("Control key is pressed.");
+            }
+            if (event.shiftKey) {
+                console.log("Shift key is pressed.");
+            }
+            if (event.altKey) {
+                console.log("Alt key is pressed.");
+            }
+            if (event.metaKey) {
+                console.log("Meta key is pressed.");
+            }
+        });
+
+// //Keydown
+// document.addEventListener("keydown", function(event) {
+//     console.log(`Key down: ${event.key} (code: ${event.code})`);
+// });
+
+// //Keypress
+
+// document.addEventListener("keypress", function(event) {
+//     console.log(`Key press: ${event.key}`);
+// });
+
+// //Keyup 
+
+// document.addEventListener("keyup", function(event) {
+//     console.log(`Key up: ${event.key} (code: ${event.code})`);
+// });
+
+// //checking modifier keys
+// document.addEventListener("keydown", function(event) {
+//     if (event.ctrlKey) {
+//         console.log("Control key is pressed.");
+//     }
+//     if (event.shiftKey) {
+//         console.log("Shift key is pressed.");
+//     }
+//     if (event.altKey) {
+//         console.log("Alt key is pressed.");
+//     }
+//     if (event.metaKey) {
+//         console.log("Meta key is pressed.");
+//     }
+// });
+
+
+// //Input event
+
+// let input = document.getElementById("myInput");
+
+// input.addEventListener("input", function(event) {
+//     console.log(`Input value: ${event.target.value}`);
+// });
+
+// //Charger event
+
+// input.addEventListener("change", function(event) {
+//     console.log(`Input value changed: ${event.target.value}`);
+// });
+
+// //Focus and blur
+
+// input.addEventListener("focus", function() {
+//     console.log("Input focused");
+// });
+
+// input.addEventListener("blur", function() {
+//     console.log("Input lost focus");
+// });
+
+// //Form event
+
+// let form = document.getElementById("myForm");
+
+// form.addEventListener("submit", function(event) {
+//     event.preventDefault();  // Prevent the default form submission
+//     console.log("Form submitted!");
+// });
+
+// //reset
+// form.addEventListener("reset", function() {
+//     console.log("Form reset!");
+// });
+
+
+
+    </script>
+</body>
+</html>

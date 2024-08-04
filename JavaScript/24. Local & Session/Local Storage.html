@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Local Storage Example</title>
+</head>
+<body>
+    <input type="text" id="name" placeholder="Enter your name">
+    <button id="save">Save Name</button>
+    <button id="get">Get Name</button>
+    <button id="remove">Remove Name</button>
+    <button id="clear">Clear All</button>
+    <div id="output"></div>
+
+    <script>
+        let saveButton = document.getElementById("save");
+        let getButton = document.getElementById("get");
+        let removeButton = document.getElementById("remove");
+        let clearButton = document.getElementById("clear");
+        let output = document.getElementById("output");
+        let nameInput = document.getElementById("name");
+
+        saveButton.addEventListener("click", function() {
+            let name = nameInput.value;
+            localStorage.setItem("name", name);
+            output.textContent = `Saved: ${name}`;
+        });
+
+        getButton.addEventListener("click", function() {
+            let name = localStorage.getItem("name");
+            output.textContent = name ? `Stored Name: ${name}` : "No name found.";
+        });
+
+        removeButton.addEventListener("click", function() {
+            localStorage.removeItem("name");
+            output.textContent = "Name removed.";
+        });
+
+        clearButton.addEventListener("click", function() {
+            localStorage.clear();
+            output.textContent = "All data cleared.";
+        });
+    </script>
+</body>
+</html>

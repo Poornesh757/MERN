@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project 1</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Peddana&display=swap">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.2/css/fontawesome.min.css" integrity="sha384-BY+fdrpOd3gfeRvTSMT+VUZmA728cfF9Z2G42xpaRkUGu2i3DyzpTURDo5A6CaLK" crossorigin="anonymous">
+    <style>
+       <style>
+        /* @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap');
+       
+        .dancing-script-<uniquifier{
+        font-family: "Dancing Script", cursive;
+        font-optical-sizing: auto;
+        font-weight: 400;
+        font-style: normal;
+        } */
+
+       * { 
+            padding: 0;
+            margin: 0;
+        }
+        :root{
+            --gradient-color: linear-gradient(rgb(230,16,201),#fdba02);
+            --background-color: #0f0c29;
+            --primary-color: #fdba02;
+        }
+        body{
+            font-family: 'bancing scripts',cursive;
+            background-color: var(--background-color);
+        }
+        nav{
+            width: 100%;
+            height: 100%;
+            display: flex;
+            color: var(--primary-color);
+            background-color: var(--background-color);
+            top: 0;
+            left: 0;
+            position: sticky;
+            z-index: 1;
+        }
+        .logo{
+            width: 35%;
+            height: 100px;
+        }
+        .logo h1{
+            line-height: 100px;
+            padding-left: 10rem;
+            font-size: 2.5rem;
+        }
+        ul{
+            color: var(--primary-color);
+            background-color: var(--background-color);
+        }
+        .items{
+            width: 50%;
+            height: 8vh;
+            justify-content: space-around;
+            display: flex;
+            flex-direction: row;
+            color: var(--primary-color);
+            background-color: var(--background-color);
+            list-style: none;
+            padding-top: 2rem;
+        }
+        .items li a{
+            font-size: 1.0rem;
+            font-weight: bolder;
+            text-transform: uppercase;
+            color: var(--primary-color);        
+        }
+        .font{
+            font-weight: bolder;
+            font-size: 2rem;
+            text-align: center;
+            padding-top: 1.5rem;
+            background: var(--gradient-color);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            text-transform: uppercase;
+        }
+        .font h2{
+            paddin: 10rem;
+        }
+        h4{
+            font-size: 1.5rem;
+            text-align: center;
+            background: #e7e4da;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            padding-top: 1.5rem;
+            text-justify: newspapers;
+        }
+        #hero{
+            height: 35rem;
+        }
+        .font h3{
+            font-weight: bolder;
+            font-size: 2.5rem;
+            text-align: center;
+            padding-top: 2rem;
+            background: var(--gradient-color);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            text-transform: uppercase;
+        }
+        .font h5{
+            font-weight: bolder;
+            font-family: 'peddana',serif;
+            font-size: 1.5rem;
+            text-align: center;
+            padding-top: 2rem;
+            background: #e7e4da;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            text-transform: uppercase;
+            text-justify: distribute-all-lines;
+        }
+        #about-img{
+            height: 25rem;
+            height: 35rem;
+        }
+        .about-heading{
+            padding-top: 10rem;
+            padding-bottom: 10rem;
+        }
+        .about-body{
+            display: flex;
+            justify-content: space-between;
+            padding-right: 2rem;
+            padding-left: 2rem;
+        }
+        .about-content{
+            padding-left: 3rem;
+            padding-right: 3rem;
+            
+        }
+        .services-heading{
+            padding-top: 10rem;
+            padding-bottom: 10rem;
+        }
+        .services{
+            display: grid;
+            justify-content: space-between;
+            grid-template-columns: repeat(3,1fr);
+            grid-gap:2rem;
+            padding-left: 2rem;
+            padding-right: 2rem;
+            padding-bottom: 5rem;
+        }
+        .article-img{
+            width: 30rem;
+            height: 15rem;
+        }
+        .article-heading{
+            padding-top: 5rem;
+            padding-bottom: 10rem;
+        }
+        .article-1{
+            display: grid;
+            grid-template-columns: 1fr 1.5fr;
+            grid-template-rows: 0.5fr 0.5fr;
+            grid-row-gap: 1rem;
+            grid-column-gap: 5rem;
+            justify-content: space-between;
+            padding-left: 3rem;
+            padding-right: 3rem;
+        }
+        .article-2{
+            display: grid;
+            grid-template-columns: 1fr 1.5fr;
+            grid-template-rows: 0.5fr 0.5fr;
+            grid-row-gap: 1rem;
+            grid-column-gap: 5rem;
+            justify-content: space-between;
+            padding-left: 3rem;
+            padding-right: 3rem;
+        }
+        .article-3{
+            display: grid;
+            grid-template-columns: 1fr 1.5fr;
+            grid-template-rows: 0.5fr 0.5fr;
+            grid-row-gap: 1rem;
+            grid-column-gap: 5rem;
+            justify-content: space-between;
+            padding-left: 3rem;
+            padding-right: 3rem;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="logo">
+            <h1>Hello World</h1>
+        </div>
+        <ul class="items ">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Services</a></li>
+            <li><a href="#">Article</a></li>
+            <li><a href="#">Contact us</a></li>
+        </ul>
+    </nav>
+    <section id="hero">
+        <div class="font">
+            <h2>Welcome to AHP Appael</h2>
+            <h4>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sapiente, laboriosam.</h4>
+        </div>
+    </section>
+    <section id="about">
+        <div class="about-heading font">
+            <h3>ABOUT</h3>
+        </div>
+        <div class="about-body font">
+            <div>
+                <img id="about-img" src="https://akm-img-a-in.tosshub.com/sites/visualstory/stories/2023_04/story_32290/assets/13.jpeg?time=1681978846" alt="About">
+            </div>
+            <div class="about-contet">
+                <h3>about me</h3>
+                <h5>Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi laboriosam qui saepe fuga, deleniti accusantium delectus, eaque ab aliquid consequuntur, facere officia error tenetur assumenda fugiat impedit laborum mollitia. Omnis voluptate fuga libero corporis saepe hic qui blanditiis numquam molestiae animi ipsam, tempora et temporibus ab dolore, obcaecati exercitationem eligendi vitae praesentium aliquam. Minima eaque nostrum aperiam et aliquam voluptatem id dicta ut cumque eum soluta esse, distinctio culpa, laboriosam deleniti nihil odit dignissimos dolore ab exercitationem asperiores dolores alias laborum repellendus. Autem eligendi, officia dolorem voluptatum nulla similique repudiandae placeat, nobis repellat saepe doloribus dignissimos, animi deleniti nesciunt odio?</h5>
+            </div>
+        </div>
+    </section>
+    <section id="services-section">
+        <div class="services-heading font">
+            <h3>SERVICES</h3>
+        </div>
+        <div class="services">
+            <div class="font">
+                <i class="fa-solid fa-cookie-bite"></i>
+                <h5>
+                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Et quasi quidem tempora molestiae non voluptas nostrum voluptatem eaque. Obcaecati esse, voluptates sed, consectetur sit voluptas at earum rem officia quo aliquam. Cum minus minima quae quisquam neque nihil sapiente dolores cumque atque odio. Iure repudiandae fugit necessitatibus adipisci nisi maiores!
+                </h5>
+            </div>
+            <div class="font">
+                <i class="fa-solid fa-moon"></i>
+                <h5>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa adipisci, cum ipsam fuga iusto unde tenetur dolorum debitis itaque, voluptas, quo quas cumque quibusdam. Quis, culpa maxime cum illo quod inventore atque possimus ipsa esse quas suscipit obcaecati fugit dicta blanditiis incidunt in debitis labore voluptate! Assumenda suscipit maxime blanditiis.</h5>
+            </div>
+            <div class="font">
+                <i class="fa-solid fa-code"></i>
+                <h5>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Debitis eius alias, reprehenderit quia similique aperiam adipisci molestiae ratione natus magni nesciunt dicta nobis facilis nam dolorem recusandae expedita. Cum, perspiciatis? Nihil ratione asperiores placeat non! Consectetur voluptate voluptas enim quo earum omnis reprehenderit aut, veritatis veniam blanditiis asperiores ullam sed.</h5>
+            </div>
+        </div>
+    </section>
+    <article id="article-section">
+        <div class="article-heading font">
+            <h3>article</h3>
+        </div>
+        <div class="article-1">
+            <div>
+                <img src="https://assets.vogue.in/photos/6230d54951da11b2e5b0b1a3/2:3/w_2560%2Cc_limit/Katrina%2520Kaif%25E2%2580%2599s%2520makeup%2520artist%2520shares%2520a%2520step-by-step%2520guide%2520to%2520recreate%2520her%2520smoky%2520eyes.jpg" alt="image" class="article-img">
+            </div>
+            <div class="font">
+                <h5>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laboriosam sit aliquam laudantium temporibus est illo voluptate atque, corrupti maiores, quasi dolorem pariatur accusamus nesciunt eius odit rerum. Repudiandae laudantium ipsa eum dolor quis explicabo provident maxime, cumque labore nostrum pariatur sit fugit libero beatae autem adipisci quae nisi magni molestias.</h5>
+            </div>
+        </div>
+        <div class="article-2">
+            <div class="font">
+                <h5>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laboriosam sit aliquam laudantium temporibus est illo voluptate atque, corrupti maiores, quasi dolorem pariatur accusamus nesciunt eius odit rerum. Repudiandae laudantium ipsa eum dolor quis explicabo provident maxime, cumque labore nostrum pariatur sit fugit libero beatae autem adipisci quae nisi magni molestias.</h5>
+            </div>
+            <div>
+                <img src="https://static.toiimg.com/photo/93581961.cms" alt="image" class="article-img">
+            </div>
+        </div>
+        <div class="article-3">
+            <div>
+                <img src="https://media.assettype.com/filmcompanion%2F2023-11%2F160fc88e-d483-4dc7-a2a4-4edcb3f70b31%2FCover.png" alt="image" class="article-img">
+            </div>
+            <div class="font">
+                <h5>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laboriosam sit aliquam laudantium temporibus est illo voluptate atque, corrupti maiores, quasi dolorem pariatur accusamus nesciunt eius odit rerum. Repudiandae laudantium ipsa eum dolor quis explicabo provident maxime, cumque labore nostrum pariatur sit fugit libero beatae autem adipisci quae nisi magni molestias.</h5>
+            </div>
+        </div>
+    </article>
+</body>
+</html>

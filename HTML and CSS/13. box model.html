@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Box Model in CSS Example</title>
+    <style>
+        /* Basic Styling */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            width: 80%;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #f0f0f0;
+            border: 1px solid #ccc;
+        }
+
+        /* Box Model Properties */
+        .box {
+            width: 200px;
+            height: 150px;
+            padding: 20px;
+            margin: 20px;
+            border: 2px solid #333;
+            background-color: #fff;
+        }
+
+        /* Alternate Box */
+        .box-alt {
+            width: 300px;
+            height: 200px;
+            padding: 10px;
+            margin: 10px;
+            border: 1px dashed #999;
+            background-color: #f9f9f9;
+        }
+
+        /* Content Box */
+        .content-box {
+            box-sizing: content-box; /* Default value */
+        }
+
+        /* Border Box */
+        .border-box {
+            box-sizing: border-box;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Box Model in CSS Example</h1>
+        <div class="box">This is a box element with padding and margin.</div>
+        <div class="box-alt">This is another box element with different dimensions and border style.</div>
+        <div class="box content-box">This box has content-box sizing (default).</div>
+        <div class="box border-box">This box has border-box sizing.</div>
+    </div>
+</body>
+</html>

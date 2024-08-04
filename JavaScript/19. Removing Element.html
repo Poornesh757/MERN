@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Element Removal Example</title>
+</head>
+<body>
+    <div id="parentElement">
+        <div id="elementToRemove">Element to Remove</div>
+        <div class="elementsToRemove">Element 1</div>
+        <div class="elementsToRemove">Element 2</div>
+        <div class="elementsToRemove">Element 3</div>
+    </div>
+
+    <script>
+        // Remove an element by itself
+        let element = document.getElementById("elementToRemove");
+        element.remove();
+
+        // Remove an element via its parent
+        let parent = document.getElementById("parentElement");
+        let child = document.querySelector(".elementsToRemove");
+        parent.removeChild(child);
+
+        // Remove multiple elements by query
+        let elements = document.querySelectorAll(".elementsToRemove");
+        elements.forEach(element => {
+            element.remove();
+        });
+
+        // Clear all child elements
+        let parentElement = document.getElementById("parentElement");
+        parentElement.innerHTML = "";
+
+        // Alternatively, clear all child elements using a loop
+        while (parentElement.firstChild) {
+            parentElement.removeChild(parentElement.firstChild);
+        }
+
+// // Select the element to be removed
+// let element = document.getElementById("elementToRemove");
+
+// // Remove the element
+// element.remove();
+
+// // Select the parent element
+// let parent = document.getElementById("parentElement");
+
+// // Select the child element to be removed
+// let child = document.getElementById("childElement");
+
+// // Remove the child element from the parent
+// parent.removeChild(child);
+
+// // Select all elements to be removed
+// let elements = document.querySelectorAll(".elementsToRemove");
+
+// // Loop through the NodeList and remove each element
+// elements.forEach(element => {
+//     element.remove();
+// });
+
+// // Select the parent element
+// let parent = document.getElementById("parentElement");
+
+// // Remove all child elements
+// parent.innerHTML = "";
+
+
+// // Select the parent element
+// let parent = document.getElementById("parentElement");
+
+// // Remove all child elements one by one
+// while (parent.firstChild) {
+//     parent.removeChild(parent.firstChild);
+// }
+
+
+// // Select elements by class name
+// let elements = document.getElementsByClassName("elementsToRemove");
+
+// // Convert HTMLCollection to Array and remove each element
+// Array.from(elements).forEach(element => {
+//     element.remove();
+// });
+
+
+// // Select elements by tag name
+// let elements = document.getElementsByTagName("div");
+
+// // Convert HTMLCollection to Array and remove each element
+// Array.from(elements).forEach(element => {
+//     element.remove();
+// });
+
+    </script>
+</body>
+</html>

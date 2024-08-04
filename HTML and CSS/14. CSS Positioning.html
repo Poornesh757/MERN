@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Positioning - All Types Example</title>
+    <style>
+        /* Basic Styling */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            width: 80%;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #f0f0f0;
+            border: 1px solid #ccc;
+        }
+
+        /* Positioning Types */
+        .static-position {
+            position: static; /* Default value */
+        }
+
+        .relative-position {
+            position: relative;
+            top: 20px;
+            left: 20px;
+        }
+
+        .absolute-position {
+            position: absolute;
+            top: 50px;
+            left: 50px;
+        }
+
+        .fixed-position {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>CSS Positioning - All Types Example</h1>
+        <div class="static-position">
+            <h2>Static Position</h2>
+            <p>This is a static-positioned element. It's positioned according to the normal flow of the document.</p>
+        </div>
+        <div class="relative-position">
+            <h2>Relative Position</h2>
+            <p>This is a relatively positioned element. It's positioned relative to its normal position in the document flow.</p>
+        </div>
+        <div class="absolute-position">
+            <h2>Absolute Position</h2>
+            <p>This is an absolutely positioned element. It's positioned relative to its closest positioned ancestor or to the initial containing block.</p>
+        </div>
+        <div class="fixed-position">
+            <h2>Fixed Position</h2>
+            <p>This is a fixed-positioned element. It's positioned relative to the viewport, which means it always stays in the same place even when the page is scrolled.</p>
+        </div>
+    </div>
+</body>
+</html>

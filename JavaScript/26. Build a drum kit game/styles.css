@@ -1,0 +1,40 @@
+/* styles.css */
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background: #282c34;
+    color: white;
+    font-family: 'Arial', sans-serif;
+}
+
+.drum-kit {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 800px;
+    margin: 20px;
+}
+
+.drum {
+    background: #444;
+    border: none;
+    outline: none;
+    color: white;
+    font-size: 20px;
+    padding: 20px;
+    margin: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: transform 0.1s ease;
+}
+
+.drum:active {
+    transform: scale(1.1);
+}
+
+.playing {
+    transform: scale(1.1);
+    box-shadow: 0 0 20px yellow;
+}

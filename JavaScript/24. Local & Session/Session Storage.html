@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Session Storage Example</title>
+</head>
+<body>
+    <input type="text" id="sessionName" placeholder="Enter your session name">
+    <button id="saveSession">Save Session Name</button>
+    <button id="getSession">Get Session Name</button>
+    <button id="removeSession">Remove Session Name</button>
+    <button id="clearSession">Clear All Sessions</button>
+    <div id="sessionOutput"></div>
+
+    <script>
+        let saveSessionButton = document.getElementById("saveSession");
+        let getSessionButton = document.getElementById("getSession");
+        let removeSessionButton = document.getElementById("removeSession");
+        let clearSessionButton = document.getElementById("clearSession");
+        let sessionOutput = document.getElementById("sessionOutput");
+        let sessionNameInput = document.getElementById("sessionName");
+
+        saveSessionButton.addEventListener("click", function() {
+            let sessionName = sessionNameInput.value;
+            sessionStorage.setItem("sessionName", sessionName);
+            sessionOutput.textContent = `Saved: ${sessionName}`;
+        });
+
+        getSessionButton.addEventListener("click", function() {
+            let sessionName = sessionStorage.getItem("sessionName");
+            sessionOutput.textContent = sessionName ? `Stored Session Name: ${sessionName}` : "No session name found.";
+        });
+
+        removeSessionButton.addEventListener("click", function() {
+            sessionStorage.removeItem("sessionName");
+            sessionOutput.textContent = "Session name removed.";
+        });
+
+        clearSessionButton.addEventListener("click", function() {
+            sessionStorage.clear();
+            sessionOutput.textContent = "All session data cleared.";
+        });
+    </script>
+</body>
+</html>

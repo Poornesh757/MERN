@@ -1,0 +1,37 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 20px;
+}
+
+#container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    text-align: center;
+}
+
+.product {
+    border-bottom: 1px solid #ddd;
+    padding: 10px 0;
+}
+
+.product:last-child {
+    border-bottom: none;
+}
+
+.product h2 {
+    margin: 0;
+    font-size: 1.2em;
+}
+
+.product p {
+    margin: 5px 0;
+    color: #555;
+}

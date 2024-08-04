@@ -1,0 +1,57 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #f5f5f5;
+}
+.container {
+    max-width: 800px;
+    width: 100%;
+    padding: 20px;
+    background: white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+h1 {
+    text-align: center;
+}
+form {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+form input {
+    flex: 1;
+    margin-right: 10px;
+}
+form button {
+    padding: 10px 20px;
+}
+.palette-list {
+    display: flex;
+    flex-wrap: wrap;
+}
+.palette {
+    width: 150px;
+    margin: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    overflow: hidden;
+}
+.palette .colors {
+    display: flex;
+}
+.palette .color {
+    flex: 1;
+    height: 50px;
+}
+.palette .details {
+    padding: 10px;
+    text-align: center;
+}
+.palette .details button {
+    margin-top: 10px;
+}

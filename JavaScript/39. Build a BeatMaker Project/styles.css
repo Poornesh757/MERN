@@ -1,0 +1,53 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #282c34;
+    color: white;
+}
+
+.container {
+    text-align: center;
+}
+
+.pads {
+    display: grid;
+    grid-template-columns: repeat(4, 100px);
+    grid-gap: 10px;
+    margin-bottom: 20px;
+}
+
+.pad {
+    width: 100px;
+    height: 100px;
+    background-color: #61dafb;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.pad.active {
+    background-color: #21a1f1;
+}
+
+.controls {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.controls .btn {
+    margin: 0 10px;
+    padding: 10px 20px;
+    border: none;
+    background-color: #61dafb;
+    color: #282c34;
+    cursor: pointer;
+    border-radius: 8px;
+}
+
+.controls input[type="range"] {
+    margin-left: 10px;
+}

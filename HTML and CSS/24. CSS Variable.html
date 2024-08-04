@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Variable</title>
+    <style>
+        :root {
+            --max-width: 1100px;
+            --premary-color:steelblue;
+            --secondary-color:skyblue;
+            --text-color:#ccc;
+            --box-1-width:1;
+            --box-2-width:3;
+        }
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            font-family: Arial, Helvetica, sans-serif sans-serif;
+            line-height: 1.4;
+            background: #ccc;
+        }
+        header {
+            background: var(--premary-color);
+            color: var(--text-color);
+            padding: 20px;
+            border: 5px solid var(--secondary-color);
+            text-align: center;
+        }
+        .container {
+            display: flex;
+            margin: auto;
+            max-width: var(--max-width);
+        }
+        .box {
+            background-color: var(--premary-color);
+            border-bottom: 5px solid var(--secondary-color);
+            color: #fff;
+            padding: 1rem;
+            margin: 1rem;
+        }
+        .box-1{
+            flex: var(--box-1-width);
+        }
+        .box-2{
+            flex: var(--box-2-width);
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>CSS Variables</h1>
+    </header>
+    <div class="container">
+        <div class="box box-1">
+            <h3>Heading</h3>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptate magnam commodi, neque molestiae odio incidunt debitis aut nam omnis, similique qui repellendus mollitia quas tenetur impedit animi vero fugit veniam? Velit, consectetur suscipit, vero eos odit quod sint saepe facilis ex tempora omnis adipisci voluptatem, ratione animi nisi. Iusto eveniet, voluptate quaerat laudantium enim odit delectus voluptatem dolorem quo expedita saepe odio quidem labore officiis, quam corporis. Dolorem, tempora. Error labore ipsa nihil. Harum possimus consectetur quibusdam ullam odit autem.</p>
+        </div>
+        <div class="box box-2">
+            <h3>Heading</h3>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptate magnam commodi, neque molestiae odio incidunt debitis aut nam omnis, similique qui repellendus mollitia quas tenetur impedit animi vero fugit veniam? Velit, consectetur suscipit, vero eos odit quod sint saepe facilis ex tempora omnis adipisci voluptatem, ratione animi nisi. Iusto eveniet, voluptate quaerat laudantium enim odit delectus voluptatem dolorem quo expedita saepe odio quidem labore officiis, quam corporis. Dolorem, tempora. Error labore ipsa nihil. Harum possimus consectetur quibusdam ullam odit autem.</p>
+        </div>
+    </div>
+</body>
+</html>

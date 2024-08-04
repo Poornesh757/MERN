@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BeatMaker</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>BeatMaker</h1>
+        <div class="pads">
+            <div class="pad" data-sound="kick"></div>
+            <div class="pad" data-sound="snare"></div>
+            <div class="pad" data-sound="hihat"></div>
+            <div class="pad" data-sound="clap"></div>
+            <div class="pad" data-sound="kick"></div>
+            <div class="pad" data-sound="snare"></div>
+            <div class="pad" data-sound="hihat"></div>
+            <div class="pad" data-sound="clap"></div>
+        </div>
+        <div class="controls">
+            <button id="play" class="btn">Play</button>
+            <button id="stop" class="btn">Stop</button>
+            <label for="tempo">Tempo:</label>
+            <input type="range" id="tempo" min="60" max="180" value="120">
+        </div>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Complex Data Storage Example</title>
+</head>
+<body>
+    <button id="saveObject">Save Object</button>
+    <button id="getObject">Get Object</button>
+    <div id="objectOutput"></div>
+
+    <script>
+        let saveObjectButton = document.getElementById("saveObject");
+        let getObjectButton = document.getElementById("getObject");
+        let objectOutput = document.getElementById("objectOutput");
+
+        saveObjectButton.addEventListener("click", function() {
+            let user = { name: "John Doe", age: 30, city: "New York" };
+            localStorage.setItem("user", JSON.stringify(user));
+            objectOutput.textContent = `Saved Object: ${JSON.stringify(user)}`;
+        });
+
+        getObjectButton.addEventListener("click", function() {
+            let user = JSON.parse(localStorage.getItem("user"));
+            objectOutput.textContent = user ? `Stored Object: ${JSON.stringify(user)}` : "No object found.";
+        });
+    </script>
+</body>
+</html>

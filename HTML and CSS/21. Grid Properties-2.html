@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid Properties - 2</title>
+    <style>
+        .container {
+            display: grid;
+            grid-template-areas: 
+                'header header header'
+                'content content sidebar'
+                'box1 box2 box2'
+                'box3 box3 box3'
+                'footer footer footer';
+                grid-gap: 1rem;
+        }
+        .header {
+            grid-area: header;
+        }   
+        .content {
+            grid-area: content;
+        }
+        .sidebar {
+            grid-area: sidebar;
+        }
+        .box1 {
+            grid-area: box1;
+        }
+        .box2 {
+            grid-area: box2;
+        }
+        .box3 {
+            grid-area: box3;
+        }
+        .footer {
+            grid-area: footer;
+            text-align: center;
+        }
+        .header, .content, .box1, .box2, .box3, .sidebar, .footer, .header{
+            background: #f4f4f4;
+            border: #ccc solid 1px;
+            padding: 1rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <h1>My Website</h1>
+        </header>
+        <section class="content">
+            <h3>Welcome to MicroDegree</h3>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Possimus quisquam, adipisci exercitationem commodi rerum omnis. Omnis adipisci blanditiis quidem, est maxime recusandae, labore earum quaerat assumenda quibusdam amet cum harum tenetur inventore ducimus molestias hic illum praesentium. Reprehenderit necessitatibus deserunt voluptate tempora, repellendus nemo incidunt suscipit quas blanditiis perspiciatis adipisci hic voluptas assumenda ratione neque quis, molestias laudantium aperiam accusantium! Vel architecto quas laboriosam dolorem quisquam amet ipsa dolor dignissimos!</p>
+        </section>
+        <aside class="sidebar">
+            <h3>Contact us</h3>
+            <ul>
+                <li>MicroDegree</li>
+                <li>Mysore</li>
+                <li>something@good.com</li>
+                <li>+91 1234567890</li>
+            </ul>
+        </aside>
+        <div class="box1">
+            <h3>Heading</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto possimus quidem corporis atque nesciunt exercitationem autem officia beatae obcaecati voluptatum sequi et reprehenderit laboriosam quo, voluptas dolor earum ab eos. Atque quia saepe blanditiis. Eos eligendi quam a quaerat quasi nulla reprehenderit eum, reiciendis, esse consectetur recusandae provident. Dolorum voluptas error voluptate inventore minus fugiat ratione voluptates. Tempore placeat atque, aliquid nobis, sequi ipsam asperiores laboriosam quasi debitis obcaecati vel a ducimus nisi! Nisi tenetur asperiores itaque consequuntur, reiciendis culpa.</p>
+        </div>
+        <div class="box2">
+            <h3>Heading</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto possimus quidem corporis atque nesciunt exercitationem autem officia beatae obcaecati voluptatum sequi et reprehenderit laboriosam quo, voluptas dolor earum ab eos. Atque quia saepe blanditiis. Eos eligendi quam a quaerat quasi nulla reprehenderit eum, reiciendis, esse consectetur recusandae provident. Dolorum voluptas error voluptate inventore minus fugiat ratione voluptates. Tempore placeat atque, aliquid nobis, sequi ipsam asperiores laboriosam quasi debitis obcaecati vel a ducimus nisi! Nisi tenetur asperiores itaque consequuntur, reiciendis culpa.</p>
+        </div>
+        <div class="box3">
+            <h3>Heading</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto possimus quidem corporis atque nesciunt exercitationem autem officia beatae obcaecati voluptatum sequi et reprehenderit laboriosam quo, voluptas dolor earum ab eos. Atque quia saepe blanditiis. Eos eligendi quam a quaerat quasi nulla reprehenderit eum, reiciendis, esse consectetur recusandae provident. Dolorum voluptas error voluptate inventore minus fugiat ratione voluptates. Tempore placeat atque, aliquid nobis, sequi ipsam asperiores laboriosam quasi debitis obcaecati vel a ducimus nisi! Nisi tenetur asperiores itaque consequuntur, reiciendis culpa.</p>
+        </div>
+        <footer class="footer">
+            <p>Copyright 2020</p>
+        </footer>
+    </div>
+</body>
+</html>

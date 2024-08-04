@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Developer Tools in CSS Example</title>
+    <style>
+        /* Basic Styling */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f0f0;
+        }
+
+        .container {
+            width: 80%;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff;
+            border: 1px solid #ccc;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            color: blue;
+        }
+
+        p {
+            color: #333;
+        }
+
+        /* Developer Tools: Hover Effect */
+        p:hover {
+            background-color: yellow;
+        }
+
+        /* Developer Tools: Media Query */
+        @media (max-width: 600px) {
+            .container {
+                width: 100%;
+                padding: 10px;
+            }
+        }
+
+        /* Developer Tools: Keyframe Animation */
+        @keyframes slideIn {
+            from {
+                transform: translateX(-100%);
+            }
+            to {
+                transform: translateX(0);
+            }
+        }
+
+        .animated {
+            animation: slideIn 5s forwards;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Developer Tools in CSS Example</h1>
+        <p>This paragraph has some basic styling applied.</p>
+        <p>Try hovering over this paragraph to see the hover effect.</p>
+        <p>This container adjusts its width and padding using a media query at a max-width of 600px.</p>
+    </div>
+
+    <div class="container animated">
+        <h1>Keyframe Animation</h1>
+        <p>This container slides in from the left using keyframe animation.</p>
+    </div>
+</body>
+</html>

@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Traversal Example</title>
+</head>
+<body>
+    <div id="container">
+        <div class="item" id="item1">Item 1</div>
+        <div class="item" id="item2">Item 2</div>
+        <div class="item" id="item3">Item 3</div>
+    </div>
+
+    <script>
+        // Access the container element by ID
+        let container = document.getElementById("container");
+        console.log(container);
+
+        // Access all items by class name
+        let items = document.getElementsByClassName("item");
+        for (let item of items) {
+            console.log(item);
+        }
+
+        // Access a specific item by querySelector
+        let item2 = document.querySelector("#item2");
+        console.log(item2);
+
+        // Access the parent of item2
+        let parent = item2.parentNode;
+        console.log(parent);
+
+        // Access the next sibling of item2
+        let nextSibling = item2.nextElementSibling;
+        console.log(nextSibling);
+
+        // Access the previous sibling of item2
+        let previousSibling = item2.previousElementSibling;
+        console.log(previousSibling);
+
+        // Access the first and last item in the container
+        let firstItem = container.firstElementChild;
+        let lastItem = container.lastElementChild;
+        console.log(firstItem);
+        console.log(lastItem);
+
+        // Find the closest ancestor with the class 'item'
+        let closestItem = item2.closest(".item");
+        console.log(closestItem);
+
+// Access an element by its ID
+// let element = document.getElementById("myElement");
+// console.log(element);
+
+// // Access elements by their class name
+// let elements = document.getElementsByClassName("myClass");
+// for (let element of elements) {
+//     console.log(element);
+// }
+
+
+// // Access elements by their tag name
+// let elements = document.getElementsByTagName("div");
+// for (let element of elements) {
+//     console.log(element);
+// }
+
+// // Select a single element using a CSS selector
+// let element = document.querySelector(".myClass");
+// console.log(element);
+
+// // Select a single element using a CSS selector
+// let element = document.querySelector(".myClass");
+// console.log(element);
+
+// // Access the parent node of an element
+// let child = document.querySelector("#childElement");
+// let parent = child.parentNode;
+// console.log(parent);
+
+// // Access all child nodes of an element
+// let parent = document.querySelector("#parentElement");
+// let children = parent.childNodes;
+// children.forEach(child => {
+//     console.log(child);
+// });
+
+// // Access the first and last child of an element
+// let parent = document.querySelector("#parentElement");
+// let firstChild = parent.firstChild;
+// let lastChild = parent.lastChild;
+// console.log(firstChild);
+// console.log(lastChild);
+
+// // Access the next sibling of an element
+// let element = document.querySelector("#myElement");
+// let nextSibling = element.nextSibling;
+// console.log(nextSibling);
+
+
+// // Access the previous sibling of an element
+// let element = document.querySelector("#myElement");
+// let previousSibling = element.previousSibling;
+// console.log(previousSibling);
+
+
+// // Access the first and last element child
+// let parent = document.querySelector("#parentElement");
+// let firstElementChild = parent.firstElementChild;
+// let lastElementChild = parent.lastElementChild;
+// console.log(firstElementChild);
+// console.log(lastElementChild);
+
+// // Access the next and previous element siblings
+// let element = document.querySelector("#myElement");
+// let nextElementSibling = element.nextElementSibling;
+// let previousElementSibling = element.previousElementSibling;
+// console.log(nextElementSibling);
+// console.log(previousElementSibling);
+
+
+// // Find the closest ancestor that matches a CSS selector
+// let element = document.querySelector("#myElement");
+// let closestAncestor = element.closest(".ancestorClass");
+// console.log(closestAncestor);
+
+    </script>   
+</body>
+</html>
+

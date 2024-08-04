@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Basic CSS Selectors Example</title>
+    <style>
+        /* Universal Selector */
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Type Selector */
+        h1 {
+            color: blue;
+        }
+
+        /* Class Selector */
+        .highlight {
+            background-color: yellow;
+        }
+
+        /* ID Selector */
+        #intro {
+            font-weight: bold;
+        }
+
+        /* Descendant Selector */
+        .container p {
+            font-style: italic;
+        }
+
+        /* Child Selector */
+        .container > div {
+            border: 1px solid #ccc;
+        }
+
+        /* Attribute Selector */
+        input[type="text"] {
+            width: 200px;
+        }
+
+        /* Pseudo-class Selector */
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <h1>Title</h1>
+    <div class="highlight" id="intro">
+        <p>This is an example of basic CSS selectors.</p>
+        <div class="container">
+            <p>This paragraph has italic font style.</p>
+            <div>This is a div inside the container.</div>
+        </div>
+    </div>
+    <input type="text" placeholder="Enter your name">
+    <a href="#">Hover over me</a>
+</body>
+</html>

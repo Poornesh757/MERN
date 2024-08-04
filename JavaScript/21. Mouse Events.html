@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mouse Events Example</title>
+    <style>
+        #box {
+            width: 200px;
+            height: 200px;
+            background-color: lightgray;
+            border: 2px solid black;
+            margin: 20px;
+        }
+    </style>
+</head>
+<body>
+    <button id="myButton">Click me</button>
+    <div id="box"></div>
+
+    <script>
+        let button = document.getElementById("myButton");
+        let box = document.getElementById("box");
+
+        // Click event
+        button.addEventListener("click", function() {
+            console.log("Button clicked!");
+        });
+
+        // Double click event
+        button.addEventListener("dblclick", function() {
+            console.log("Button double-clicked!");
+        });
+
+        // Mouse down event
+        box.addEventListener("mousedown", function(event) {
+            console.log(`Mouse button pressed down: ${event.button}`);
+        });
+
+        // Mouse up event
+        box.addEventListener("mouseup", function(event) {
+            console.log("Mouse button released!");
+        });
+
+        // Mouse over event
+        box.addEventListener("mouseover", function() {
+            console.log("Mouse pointer entered the box!");
+        });
+
+        // Mouse out event
+        box.addEventListener("mouseout", function() {
+            console.log("Mouse pointer left the box!");
+        });
+
+        // Mouse move event
+        box.addEventListener("mousemove", function(event) {
+            console.log(`Mouse moved at (${event.clientX}, ${event.clientY})`);
+        });
+
+        // Mouse enter event
+        box.addEventListener("mouseenter", function() {
+            console.log("Mouse pointer entered the box!");
+        });
+
+        // Mouse leave event
+        box.addEventListener("mouseleave", function() {
+            console.log("Mouse pointer left the box!");
+        });
+
+        // Checking for modifier keys
+        box.addEventListener("click", function(event) {
+            if (event.ctrlKey) {
+                console.log("Control key was pressed during the click.");
+            }
+            if (event.shiftKey) {
+                console.log("Shift key was pressed during the click.");
+            }
+            if (event.altKey) {
+                console.log("Alt key was pressed during the click.");
+            }
+            if (event.metaKey) {
+                console.log("Meta key was pressed during the click.");
+            }
+        });
+
+// //Click
+// let button = document.getElementById("myButton");
+// button.addEventListener("click", function() {
+//     console.log("Button clicked!");
+// });
+
+// //dblclick
+
+// let button = document.getElementById("myButton");
+// button.addEventListener("dblclick", function() {
+//     console.log("Button double-clicked!");
+// });
+
+// //mousedown
+
+// let box = document.getElementById("box");
+// box.addEventListener("mousedown", function(event) {
+//     console.log(`Mouse button pressed down: ${event.button}`);
+// });
+
+// //mouseup
+
+// let box = document.getElementById("box");
+// box.addEventListener("mouseup", function() {
+//     console.log("Mouse button released!");
+// });
+
+// //mouseover
+
+// let box = document.getElementById("box");
+// box.addEventListener("mouseover", function() {
+//     console.log("Mouse pointer entered the box!");
+// });
+
+// //mouseout
+
+// let box = document.getElementById("box");
+// box.addEventListener("mouseout", function() {
+//     console.log("Mouse pointer left the box!");
+// });
+
+// //mousemove
+
+// let box = document.getElementById("box");
+// box.addEventListener("mousemove", function(event) {
+//     console.log(`Mouse moved at (${event.clientX}, ${event.clientY})`);
+// });
+
+// //mouseenter
+
+// let box = document.getElementById("box");
+// box.addEventListener("mouseenter", function() {
+//     console.log("Mouse pointer entered the box!");
+// });
+
+// //mouseleave
+
+// let box = document.getElementById("box");
+// box.addEventListener("mouseleave", function() {
+//     console.log("Mouse pointer left the box!");
+// });
+
+// //Mouse event prperties
+// //ClientX, ClientY;
+
+// let box = document.getElementById("box");
+// box.addEventListener("mousemove", function(event) {
+//     console.log(`Mouse moved at (${event.clientX}, ${event.clientY})`);
+// });
+
+// //button
+
+// let button = document.getElementById("myButton");
+// button.addEventListener("click", function() {
+//     console.log("Button clicked!");
+// });
+
+// //altKey, shiftKey, ctrlKey, metaKey
+
+// let box = document.getElementById("box");
+// box.addEventListener("click", function(event) {
+//     if (event.ctrlKey) {
+//         console.log("Control key was pressed during the click.");
+//     }
+//     if (event.shiftKey) {
+//         console.log("Shift key was pressed during the click.");
+//     }
+//     if (event.altKey) {
+//         console.log("Alt key was pressed during the click.");
+//     }
+//     if (event.metaKey) {
+//         console.log("Meta key was pressed during the click.");
+//     }
+// });
+    </script>
+</body>
+</html>

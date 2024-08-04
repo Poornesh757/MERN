@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Listeners and Event Object Example</title>
+    <style>
+        #box {
+            width: 100px;
+            height: 100px;
+            background-color: white;
+            border: 1px solid black;
+        }
+        #myList li {
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <button id="myButton">Click me</button>
+    <a href="https://www.example.com" id="myLink">Go to Example.com</a>
+    <div id="box"></div>
+    <form id="myForm">
+        <input type="text" name="name" placeholder="Your name">
+        <button type="submit">Submit</button>
+    </form>
+    <ul id="myList">
+        <li>Item 1</li>
+        <li>Item 2</li>
+        <li>Item 3</li>
+    </ul>
+
+    <script>
+        // Add a click event listener
+        let button = document.getElementById("myButton");
+        button.addEventListener("click", function(event) {
+            alert("Button clicked!");
+        });
+
+        // Prevent default action of a link
+        let link = document.getElementById("myLink");
+        link.addEventListener("click", function(event) {
+            event.preventDefault();
+            alert("Default action prevented!");
+        });
+
+        // Change box color on mouse events
+        let box = document.getElementById("box");
+        box.addEventListener("mouseover", function() {
+            box.style.backgroundColor = "yellow";
+        });
+        box.addEventListener("mouseout", function() {
+            box.style.backgroundColor = "white";
+        });
+
+        // Log key presses
+        document.addEventListener("keydown", function(event) {
+            console.log("Key pressed: " + event.key);
+        });
+
+        // Handle form submission
+        let form = document.getElementById("myForm");
+        form.addEventListener("submit", function(event) {
+            event.preventDefault();
+            alert("Form submitted!");
+        });
+
+        // Event delegation for list items
+        let list = document.getElementById("myList");
+        list.addEventListener("click", function(event) {
+            if (event.target.tagName === "LI") {
+                alert("List item clicked: " + event.target.textContent);
+            }
+        });
+
+// // Select the element
+// let button = document.getElementById("myButton");
+
+// // Add a click event listener
+// button.addEventListener("click", function() {
+//     alert("Button clicked!");
+// });
+
+// // Define the event handler function
+// function handleClick() {
+//     alert("Button clicked!");
+// }
+
+// // Add the event listener
+// button.addEventListener("click", handleClick);
+
+// // Remove the event listener
+// button.removeEventListener("click", handleClick);
+
+
+// button.addEventListener("click", function(event) {
+//     console.log(event);
+// });
+
+// //types
+// button.addEventListener("click", function(event) {
+//     console.log(event.type);  // "click"
+// });
+
+// //target
+// button.addEventListener("click", function(event) {
+//     console.log(event.target);  // <button id="myButton">Click me</button>
+// });
+
+// //current target
+// button.addEventListener("click", function(event) {
+//     console.log(event.currentTarget);  // <button id="myButton">Click me</button>
+// });
+
+// //preventDefault
+// let link = document.getElementById("myLink");
+// link.addEventListener("click", function(event) {
+//     event.preventDefault();
+//     alert("Default action prevented!");
+// });
+
+// //stopPropagation
+// let parent = document.getElementById("parent");
+// let child = document.getElementById("child");
+
+// parent.addEventListener("click", function() {
+//     alert("Parent clicked!");
+// });
+
+// child.addEventListener("click", function(event) {
+//     event.stopPropagation();
+//     alert("Child clicked!");
+// });
+
+// //Event Types 
+// let box = document.getElementById("box");
+
+// // Mouse over event
+// box.addEventListener("mouseover", function() {
+//     box.style.backgroundColor = "yellow";
+// });
+
+// // Mouse out event
+// box.addEventListener("mouseout", function() {
+//     box.style.backgroundColor = "white";
+// });
+
+// // Keyboard events  
+// document.addEventListener("keydown", function(event) {
+//     console.log("Key pressed: " + event.key);
+// });
+
+// // Form events
+// let form = document.getElementById("myForm");
+
+// form.addEventListener("submit", function(event) {
+//     event.preventDefault();
+//     alert("Form submitted!");
+// });
+
+// // Event delegation for list items
+// let list = document.getElementById("myList");
+
+// list.addEventListener("click", function(event) {
+//     if (event.target.tagName === "LI") {
+//         alert("List item clicked: " + event.target.textContent);
+//     }
+// });
+
+
+
+
+    </script>
+</body>
+</html>

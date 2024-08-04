@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Element Creation Example</title>
+</head>
+<body>
+    <div id="existingElement">Existing Element</div>
+
+    <script>
+        // Create a new section element
+        let section = document.createElement("section");
+        section.id = "newSection";
+        section.classList.add("sectionClass");
+
+        // Create a heading for the section
+        let heading = document.createElement("h2");
+        heading.textContent = "New Section Heading";
+        section.appendChild(heading);
+
+        // Create a list of items
+        let ul = document.createElement("ul");
+        for (let i = 1; i <= 3; i++) {
+            let li = document.createElement("li");
+            li.textContent = "Item " + i;
+            ul.appendChild(li);
+        }
+        section.appendChild(ul);
+
+        // Insert the new section before the existing element
+        let existingElement = document.getElementById("existingElement");
+        existingElement.parentNode.insertBefore(section, existingElement);
+
+
+// // Create a new <div> element
+//     let newDiv = document.createElement("div");
+// console.log(newDiv);  // <div></div>
+
+// // Create a new <div> element
+//     let newDiv = document.createElement("div");
+
+// // Set the id attribute
+// newDiv.id = "myNewDiv";
+
+// // Add a class
+// newDiv.classList.add("myClass");
+
+// // Set other attributes using setAttribute
+// newDiv.setAttribute("data-info", "someData");
+
+// console.log(newDiv);  // <div id="myNewDiv" class="myClass" data-info="someData"></div>
+
+// // Set the inner HTML of the element
+// newDiv.innerHTML = "<p>This is a paragraph inside the div.</p>";
+// console.log(newDiv.innerHTML);  // <p>This is a paragraph inside the div.</p>
+
+
+// // Set the inner HTML of the element
+// newDiv.innerHTML = "<p>This is a paragraph inside the div.</p>";
+// console.log(newDiv.innerHTML);  // <p>This is a paragraph inside the div.</p>
+
+
+// // Set the text content of the element
+// newDiv.textContent = "This is plain text inside the div.";
+// console.log(newDiv.textContent);  // This is plain text inside the div.
+
+
+// // Append the new div to the body
+// document.body.appendChild(newDiv);
+
+
+// // Create a new <ul> element
+//     let ul = document.createElement("ul");
+
+// // Create and append multiple <li> elements
+// for (let i = 1; i <= 5; i++) {
+//     let li = document.createElement("li");
+//     li.textContent = "Item " + i;
+//     ul.appendChild(li);
+// }
+
+// // Append the <ul> to the body
+// document.body.appendChild(ul);
+
+
+// // Create a new <div> element
+//     let newDiv = document.createElement("div");
+// newDiv.textContent = "I am a new div.";
+
+// // Insert the new div before an existing element
+// let referenceNode = document.querySelector("#existingElement");
+// referenceNode.parentNode.insertBefore(newDiv, referenceNode);
+
+
+// // Create a new <div> element
+//     let newDiv = document.createElement("div");
+// newDiv.textContent = "I am another new div.";
+
+// // Insert the new div before the end of the body
+// document.body.insertAdjacentElement('beforeend', newDiv);
+
+    </script>
+</body>
+</html>
