@@ -9,9 +9,9 @@ let val;
 // val = firstname + lastname;
 
 //concatenate
-// val = firstname + " " + lastname;
+// val = firstName + " " + lastName;
 
-//Append
+// Append
 // val = "Babi ";
 // val += "Poornesh";
 
@@ -25,22 +25,22 @@ let val;
 
 //concat()
 // val = firstName.toUpperCase();
-// val = firstName.toLowerCase();
+// val = lastName.toLowerCase();
 
-// val = firstName[1];
+// val = firstName[0];
 
 //indexOf()
 // val = firstName.indexOf("h");
-// val = firstName.lastIndexOf("p");   ??????????????
+// val = firstName.lastIndexOf("p");
 
 //charAt()
 // val = firstName.charAt("7");
 
 //substring()
-// val = firstName.substring(0, 6);
+// val = firstName.substring(0, 7);
 
 //slice()
-// val = firstName.slice(0, 6);
+// val = firstName.slice(0, 8);
 
 //split()
 // val = str.split(" ");
@@ -50,7 +50,8 @@ let val;
 // val = str.replace("Poornesh", "Poornesh HR");
 
 //include()
-val = str.includes("Poornesh");
+// val = str.includes("Poornesh");
 
 
 console.log(val);
+document.writeln(val);

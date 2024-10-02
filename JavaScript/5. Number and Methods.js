@@ -1,6 +1,6 @@
 //Number and Math Object
 
-const num1 = 109;
+const num1 = 100;
 const num2 = 50;
 
 let val;
@@ -10,7 +10,7 @@ val = num1 * num2;
 val = num1 / num2;
 val = num1 % num2; // modilus Number
 
-//Math Object
+// //Math Object
 
 val = Math.PI;
 val = Math.E;
@@ -22,7 +22,7 @@ val = Math.abs(-3);
 val = Math.pow(8, 2);
 val = Math.min(2, 33, 4, 1, 55, 6, 7, 8, 9, 10);
 val = Math.max(2, 33, 4, 1, 55, 6, 7, 8, 9, 10);
-val = Math.random() * 20 + 1;
+val = Math.random() * 20;
 val = Math.floor(Math.random() * 20 + 1);
 
 
